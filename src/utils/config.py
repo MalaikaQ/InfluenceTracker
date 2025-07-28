@@ -117,3 +117,32 @@ VIZ_SETTINGS = {
     'color_palette': 'viridis',
     'save_formats': ['png', 'pdf']
 }
+
+def load_config():
+    """
+    Load and return the complete configuration dictionary.
+    
+    Returns:
+        dict: Complete configuration settings
+    """
+    return {
+        'reddit': REDDIT_CONFIG,
+        'youtube': YOUTUBE_CONFIG,
+        'twitter': TWITTER_CONFIG,
+        'communities': {
+            'reddit': REDDIT_COMMUNITIES,
+            'youtube': YOUTUBE_TARGETS
+        },
+        'cultural_timeline': CULTURAL_TIMELINE,
+        'analysis': ANALYSIS_SETTINGS,
+        'visualization': VIZ_SETTINGS,
+        'paths': {
+            'project_root': PROJECT_ROOT,
+            'data_dir': DATA_DIR,
+            'raw_data_dir': RAW_DATA_DIR,
+            'processed_data_dir': PROCESSED_DATA_DIR,
+            'results_dir': RESULTS_DIR,
+            'figures_dir': FIGURES_DIR,
+            'reports_dir': REPORTS_DIR
+        }
+    }
